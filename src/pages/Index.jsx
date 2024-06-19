@@ -1,5 +1,6 @@
 import { Container, Text, VStack, Heading, Box, Button, Image, HStack } from "@chakra-ui/react";
 import { FaPlane, FaHotel, FaCar } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   return (
@@ -13,9 +14,11 @@ const Index = () => {
         </Text>
         <HStack spacing={8}>
           <Box textAlign="center">
-            <Button leftIcon={<FaPlane />} colorScheme="teal" size="lg">
-              Flights
-            </Button>
+            <Link to="/flight-search">
+              <Button leftIcon={<FaPlane />} colorScheme="teal" size="lg">
+                Flights
+              </Button>
+            </Link>
           </Box>
           <Box textAlign="center">
             <Button leftIcon={<FaHotel />} colorScheme="teal" size="lg">
